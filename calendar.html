@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Calendar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="main">
+    <nav class="navbar"> 
+        <div class="navbar__container"> 
+            <div class="navbar__toggle" id="mobile-menu"> 
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/home.html" class="navbar__links">Home</a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+    <header class="header">
+        <h1 class="header1">Calendar</h1>
+    </header>
+
+<body>
+
+<body class="calendar">
+<script type="text/javascript"> 
+var dt= new Date();
+var month=dt.getMonth(); // read the current month
+var year=dt.getFullYear(); // read the current year 
+
+dt=new Date(year, month, 01);//Year , month,date format
+
+var first_day=dt.getDay(); //, first day of present month
+document.write("first_day=" + first_day + "<br><br>");
+
+dt.setMonth(month+1,0); // Set to next month and one day backward. 
+var last_date=dt.getDate(); // Last date of present month
+document.write(dt); // Last date in full
+document.write("<br><br> Last Date of the month =" + last_date + "<br><br>");
+
+var dy=1; // day variable for adjustment of starting date. 
+document.write ("<table><tr><td>Su</td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td>");
+
+for(i=0;i<=41;i++){
+if((i%7)==0){document.write("</tr><tr>");} // if week is over then start a new line 
+if((i>= first_day) && (dy<= last_date)){
+document.write("<td>"+ dy +"</td>");
+dy=dy+1;
+}else {document.write("<td>*</td>");} // Blank dates. 
+} // end of for loop
+
+document.write("</tr></table>")
+</script>
+
+</body>
+
+<style>
+    .calendar{
+        color:blue;
+        justify-content: center;
+        text-align: left;
+        padding: 5rem;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2rem;
+    }
+    
+</style>
+
+</html>

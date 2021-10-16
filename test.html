@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITLE</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="test.css"> -->
+    <!-- commont out above line once able to move into here in style section -->
+</head>
+
+<body class="main">
+    <nav class="navbar"> 
+        <div class="navbar__container"> 
+            <div class="navbar__toggle" id="mobile-menu"> 
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/home.html" class="navbar__links">Home</a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+    <header class="header">
+        <h1 class="header1">Thing</h1>
+    </header>
+  <body>
+
+<body>
+    <!--PEN CODE-->
+<div id="tasker" class="tasker">
+	<div id="error" class="error">Please enter a task</div>
+	<div id="tasker-header" class="tasker-header">
+		<input type="text" id="input-task" placeholder="Enter a task">
+		<button id="add-task-btn" class="click_btn">Add<i class="fa fa-fw fa-plus"></i>
+		</button>
+	</div>
+	<div class="tasker-body">
+		<ul id="tasks" class="tasks"></ul>
+	</div>
+</div>
+<!--END PEN CODE-->
+</body>
+
+<style>
+
+.tasker{
+    color:red
+}
+
+.error{
+    color:green;
+}
+
+.tasker-header{
+    color:blue
+}
+.task{
+    color:brown
+}
+
+.tasker-body{
+    color:white
+}
+
+.button {
+	color: black;
+    height: 20px;
+    position:relative;
+}
+
+.taskTrsh{
+    height: 50px;
+}
+
+.delBtn{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    padding: .16rem;
+    margin: 0 1rem;
+
+}
+
+
+</style> 
+
+<script>
+    (function() {
+	'use strict';
+	var tasker = {
+		init: function() {
+			this.cacheDom();
+			this.bindEvents();
+			this.evalTasklist();
+		},
+		cacheDom: function() {
+			this.taskInput = document.getElementById("input-task");
+			this.addBtn = document.getElementById("add-task-btn");
+			this.tasklist = document.getElementById("tasks");
+			this.tasklistChildren = this.tasklist.children;
+			this.errorMessage = document.getElementById("error");
+		},
+		bindEvents: function() {
+			this.addBtn.onclick = this.addTask.bind(this);
+			this.taskInput.onkeypress = this.enterKey.bind(this);
+		},
+		evalTasklist: function() {
+			var i, chkBox, delBtn;
+			//BIND CLICK EVENTS TO ELEMENTS
+			for (i = 0; i < this.tasklistChildren.length; i += 1) {
+				//ADD CLICK EVENT TO CHECKBOXES
+				chkBox = this.tasklistChildren[i].getElementsByTagName("input")[0];
+				chkBox.onclick = this.completeTask.bind(this, this.tasklistChildren[i], chkBox);
+				//ADD CLICK EVENT TO DELETE BUTTON
+				delBtn = this.tasklistChildren[i].getElementsByTagName("button")[0];
+				delBtn.onclick = this.delTask.bind(this, i);
+                delBtn.style.height = '18px';
+                delBtn.style.width = '18px';
+                delBtn.style.position = 'relative';
+                delBtn.className = 'delBtn';
+                delBtn.innerText = 'X';
+                
+			}
+		},
+		render: function() {
+			var taskLi, taskChkbx, taskVal, taskBtn, taskTrsh;
+			//BUILD HTML
+			taskLi = document.createElement("li");
+			taskLi.setAttribute("class", "task");
+			//CHECKBOX
+			taskChkbx = document.createElement("input");
+			taskChkbx.setAttribute("type", "checkbox");
+			//USER TASK
+			taskVal = document.createTextNode(this.taskInput.value);
+			//DELETE BUTTON
+			taskBtn = document.createElement("button");
+			//TRASH ICON
+			taskTrsh = document.createElement("i");
+			taskTrsh.setAttribute("class", "fa fa-trash");
+			//INSTERT TRASH CAN INTO BUTTON
+			taskBtn.appendChild(taskTrsh);
+
+			//APPEND ELEMENTS TO TASKLI
+			taskLi.appendChild(taskChkbx);
+			taskLi.appendChild(taskVal);
+			taskLi.appendChild(taskBtn);
+
+			//ADD TASK TO TASK LIST
+			this.tasklist.appendChild(taskLi);
+
+		},
+		completeTask: function(i, chkBox) {
+			if (chkBox.checked) {
+				i.className = "task completed";
+			} else {
+				this.incompleteTask(i);
+			}
+		},
+		incompleteTask: function(i) {
+			i.className = "task";
+		},
+		enterKey: function(event) {
+			if (event.keyCode === 13 || event.which === 13) {
+				this.addTask();
+			}
+		},
+		addTask: function() {
+			var value = this.taskInput.value;
+			this.errorMessage.style.display = "none";
+
+			if (value === "") {
+				this.error();
+			} else {
+				this.render();
+				this.taskInput.value = "";
+				this.evalTasklist();
+			}
+		},
+		delTask: function(i) {
+			this.tasklist.children[i].remove();
+			this.evalTasklist();
+		},
+		error: function() {
+			this.errorMessage.style.display = "block";
+		}
+	};
+
+	tasker.init();
+}());
+</script>
+
+<!-- <script scr="text.js"></script> -->
+<!-- comment out above line once able to move into here in script section -->
+
+</html>
+
+
+    
+
+    
+    
