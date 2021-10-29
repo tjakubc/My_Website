@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8908126c1f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="goals">
+    <!--Navbar Section-->
+  <nav class="navbar"> 
+    <div class="navbar__container"> 
+        <div class="navbar__toggle" id="mobile-menu"> 
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/index.html" class="navbar__links">Home</a>
+            <li class="navbar__item">
+            <a href="/resume.html" class="navbar__links">Resume</a>
+            <li class="navbar__item">
+            <a href="/projects.html" class="navbar__links">Projects</a>
+            <li class="navbar__item">
+            <a href="/tasks.html" class="navbar__links">Tasks</a>
+            <li class="navbar__item">
+            <a href="/work_history.html" class="navbar__links">Work History</a>
+            <li class="navbar__item">
+            <a href="/education.html" class="navbar__links">Education</a>
+            <li class="navbar__item">
+            <a href="/personal.html" class="active_navbar__links">Personal</a>
+            <li class="navbar__item">
+            <a href="/goals.html" class="navbar__links">Goals</a>
+        </li>
+        </ul>
+    </div>
+  </nav>
+
+<!--body section-->
+
+<div class="test">
+    <h1 class="Header1">Personal Information</h1>
+    <h2 class="Header2">A little bit about me</h2>
+    <p class="body_text2">When I am not hard at work for Discover or my parents, my family and I enjoy the outdoors! We make it a point to get our kids out into the woods at least once per month, if not more. Our family of 4 all enjoy hunting and off-roading as well as hiking and exploring. We are big dog people and currently have a 2 year old Great Dane and a 4 year old Doberman - Rottweiler cross.</p>
+</div>
+<!--picture section-->
+
+<div class='container'>
+    <div class='pics_in_a_row'>
+
+      <div class='img1'>
+        <img src='images/img_lucas.JPG'>
+        <p class="img_text">This is our oldest son, Lucas</p>
+      </div>
+
+      <div class='img2'>
+        <img src='images/img_family2.jpg'>
+        <p class="img_text">This is our family in our happy place, the woods</p>
+      </div>
+
+      <div class='img3'>
+        <img src='images/img_weston.JPG'>
+        <p class="img_text">This is our youngest son, Weston</p>
+      </div>
+
+    </div>
+    <div class='pics_in_a_row'>
+      <div class='img4'>
+        <img src='images/img_dogs_4mo.JPG'>
+        <p class="img_text">These are our dogs, when our Great Dane was only 4 months old</p>
+      </div>
+
+      <div class='img5'>
+        <img src='images/img_jak_family.JPG'>
+        <p class="img_text">This is my husband's side of the family</p>
+      </div>
+
+    </div>
+  </div>
+
+<style>
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  background: #def2f1;
+}
+
+.pics_in_a_row {
+  display: flex;
+  background: #def2f1;
+}
+
+.img1 { flex: 1.09; }
+.img2 { flex: 1.36; }
+.img3 { flex: 1.09; }
+.img4 { flex: 1.0; }
+.img5 { flex: 1.2; }
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  background: #def2f1;
+}
+
+.container {
+  background: white;
+  margin: 0 auto;
+  padding: 5%;
+  width: 75%;
+  background: #def2f1;
+}
+
+.pics_in_a_row {
+  margin: 25px 0;
+}
+
+.pics_in_a_row > div:not(:last-child) {
+  margin-right: 2%;
+}
+
+.img_text{
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    background: #def2f1;
+  padding: 5px 30px;
+}
+  </style>
+
+<script src="app.js"></script>
+
+</body>
+</html>

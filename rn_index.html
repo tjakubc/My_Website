@@ -1,0 +1,58 @@
+<!-- (Watch Part 1) How to Make a Responsive Navigation Menu Navbar Using HTML, CSS, and Javascript Tutorial here:
+https://youtu.be/yFWAOzwovrQ
+
+(Watch Part 2) How to Make a Responsive Website Home Page Using HTML CSS Complete Beginner Step By Step Tutorial
+https://youtu.be/r7TapFkrmmw 
+
+(Watch Part 3) How to Make an Email Signup Form Popup Modal with Validation HTML, CSS, and Javascript Tutorial
+ https://www.youtube.com/watch?v=Dn4_kkmeVqI&list=PLs1fqgQpnCmJY47kwBeZZcJ63ZpCJDLO8&index=4-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rn_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Nunito&display=swap" rel="stylesheet">
+    <title>Responsive_Navigation</title>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <h1 id="navbar-logo">LUXCO</h1>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-links">home</a></li>
+                <li><a href="#" class="nav-links">services</a></li>
+                <li><a href="#" class="nav-links">about</a></li>
+                <li><a href="#" class="nav-links">contact</a></li>
+                <li><a href="#" class="nav-links nav-links-btn">signup</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- body -->
+    <div class="main">
+        <div class="main-container">
+            <div class="main-content">
+                <h1>skyrocket your results</h1>
+                <p>luxco allows you to fully automate your business so you can focus on what's important</p>
+                <button class="main-btn"><a href="#">get started</a></button>
+            </div>
+            <div class="main-img-container">
+                <img src="images/pic1.svg" alt="tree" id="main-img">
+            </div>
+        </div>
+    </div>
+
+    <script src="rn_app.js"></script>
+</body>
+
+</html>

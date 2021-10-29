@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="main">
+    
+    
+
+    <nav class="navbar"> 
+        <div class="navbar__container"> 
+            <div class="navbar__toggle" id="mobile-menu"> 
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Link1</a>
+                    <li class="navbar__item">
+                    <a href="/" class="navbar__links">Link2</a>
+                    <li class="navbar__item">
+                    <a href="/" class="navbar__links">Link3</a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+    <header class="header">
+        <h1 class="header1">Tammy's Stuff</h1>
+        <h2 class="header2">Links to forms, calendars, travel planners, etc.</h2>
+        
+
+        <button class="click_btn"
+            onclick="document.getElementById('demo').innerHTML = Date()">
+            Click me to display Date and Time.</button>
+            <p id="demo"></p>
+    </header>
+
+    <body class=main_body>
+        <p class="body1">Things to do</p>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+        </ul>
+        <p>more stuff</p>
+    </body>
+
+    <body class="main_body_2">
+        <div class="button_group1">
+            <div class="button" onclick="alert('hey')">
+            <button class="click_btn">hey pop</button>
+            </div>
+            <div class="button" onclick="alert('check this out!')">
+            <button class="click_btn">hey pop</button>
+            </div>
+        </div>
+        <div class="button2">
+            <button class="click_btn2"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfQAiEWG9dUYnxBqiXZ5JZADFrd5F3O_cjSHDql9sLZ-02hPA/viewform?usp=sf_link">trips</a></button>
+
+            
+            <div class="button">
+            <button class="click_btn2"><a href="/Calculator.html">Calculator</a></button>
+           
+            <div class="button">
+            <button class="click_btn2"><a href="/calendar.html">Calendar</a></button>
+            
+            <div class="button">
+            <button class="click_btn2"><a href="/grocery.html">Grocery List</a></button>
+
+            <div class="button">
+            <button class="click_btn2"><a href="/Tasks.html">Tasks</a></button>
+           
+
+            <div class="button">
+            <button class="click_btn2"><a href="/Stopwatch.html">Stop Watch</a></button>
+
+        </div>
+           
+        
+
+    </body>
+
+
+    
+    <div>
+        <div class="button">
+            <button class="click_btn2"><a href="/IMG_3376.JPG">link</a></button>
+    </div>
+<!-- 
+    <footer>
+        <p class="footer1">footer</p>
+        <p>footertext</p>
+    </footer> -->
+</body>
+
+<style>
+    .main {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb9BlSOqZoNv2Mx-Rm83c0rBbzH1clMjEVAg&usqp=CAU");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw;
+  background-size: cover;
+}
+
+.header {
+  background-color: rgba(37, 94, 0, 0.397);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  height: 90vh;
+  background-color: #e0e0e0;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 2px;
+}
+
+.header1 {
+  font-size: 3rem;
+  background-image: linear-gradient(to top, #0003cc 0%, #000000 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-align: center;
+}
+
+.header2 {
+  font-size: 2rem;
+  background-image: linear-gradient(to top, #0c2c00 0%, #001449 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-align: left;
+  padding: 10px;
+}
+
+.body1 {
+  margin-top: 0.2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+  padding: 5px 10px;
+}
+
+.footer1 {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  padding: 5px 30px;
+}
+
+.click_btn {
+  font-size: 1rem;
+  background: rgb(0, 128, 100);
+  background: radial-gradient(circle, rgb(0, 138, 7) 0%, rgb(0, 75, 50) 100%);
+  padding: 14px 32px;
+  border-radius: 24px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  display: inline-block;
+}
+
+.click_btn2 {
+  font-size: 1rem;
+  background: rgb(0, 128, 100);
+  background: radial-gradient(circle, rgb(0, 138, 7) 0%, rgb(0, 75, 50) 100%);
+  padding: 14px 32px;
+  border-radius: 24px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  display: inline-block;
+}
+
+.click_btn a {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+}
+
+.click_btn2 a {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+}
+
+.click_btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #278fe9;
+  opacity: 50%;
+  transition: all 0.35s;
+  border-radius: 24px;
+  color: #fff;
+}
+
+.click_btn2:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #278fe9;
+  opacity: 50%;
+  transition: all 0.35s;
+  border-radius: 24px;
+  color: #fff;
+}
+
+.click_btn:hover {
+  color: #fff;
+}
+
+.click_btn2:hover {
+  color: #fff;
+}
+
+.click_btn:hover:after {
+  width: 100%;
+}
+
+.click_btn2:hover:after {
+  width: 100%;
+}
+
+.main_body_2 {
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+}
+
+.button {
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+}
+
+.button2 {
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+}
+
+.button_group1 {
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+}
+
+.navbar {
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 10px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  /* padding: 0 10px; */
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.navbar__item {
+  height: 2px;
+}
+
+.navbar__links {
+  color: #f95e2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 40%;
+}
+
+.navbar__links:hover {
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0;
+}
+
+</style>
+
+</html>
